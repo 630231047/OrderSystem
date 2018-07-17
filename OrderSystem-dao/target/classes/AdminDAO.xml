@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jisheng.dao.AdminDAO">
-    <insert id="addCusRole" parameterType="com.jisheng.po.User" useGeneratedKeys="true" keyProperty="id">
+<mapper namespace="www.jisheng.dao.AdminDAO">
+    <insert id="addCusRole" parameterType="www.jisheng.po.User" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO userandrole (id,user_id,role_id) values(null,?,?)
     </insert>
-    <delete id="removeCusRole" parameterType="com.jisheng.po.User">
+    <delete id="removeCusRole" parameterType="www.jisheng.po.User">
         DELETE FROM userandrole WHERE user_id AND role_id=?
     </delete>
-    <insert id="addStoRole" parameterType="com.jisheng.po.User" >
+    <insert id="addStoRole" parameterType="www.jisheng.po.User" >
         INSERT INTO userandrole (id,user_id,role_id) values(null,#{user_id},2)
     </insert>
-    <delete id="removeStoRole" parameterType="com.jisheng.po.User">
+    <delete id="removeStoRole" parameterType="www.jisheng.po.User">
         DELETE FROM userandrole WHERE user_id AND role_id=#{role_id}
     </delete>
-    <select id="lookRole" parameterType="com.jisheng.po.User" resultMap="com.jisheng.bo.>
-        SELECT userandrole.user_id,roles.role_name
-				+  FROM userandrole INNER JOIN roles
-				+  ON roles.role_id=userandrole.role_id WHERE user_id=#{user_id}
-    </select>
+    <!--<select id="lookRole" parameterType="www.jisheng.po.User" resultMap="www.jisheng.po.Role">-->
+        <!--SELECT userandrole.user_id,roles.role_name-->
+				<!--+  FROM userandrole INNER JOIN roles-->
+				<!--+  ON roles.role_id=userandrole.role_id WHERE user_id=#{user_id}-->
+    <!--</select>-->
     <!--<resultMap id="lookRoleList" type=""-->
     <!--<select id="lookAll1" resultType="string">-->
         <!--SELECT role_id,role_name FROM roles-->

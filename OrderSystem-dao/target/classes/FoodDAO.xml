@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="www.jisheng.dao.FoodDAO">
+    <insert id="add" parameterType="www.jisheng.po.Food" >
+        INSERT INTO foods (id,store_id,name,price,uuidname,savepath) values(null,#{store_id},#{name},#{price},#{uuidname},#{savepath})
+    </insert>
+    <delete id="remove" parameterType="www.jisheng.po.Food">
+        DELETE FROM foods WHERE id=#{id}
+    </delete>
+    <select id="lookSomeOne" parameterType="www.jisheng.po.Food" resultType="www.jisheng.po.Food">
+        SELECT id,store_id,name,price,uuidname,savepath FROM foods WHERE store_id=#{store_id}
+    </select>
+    <update id="update" parameterType="www.jisheng.po.Food">
+        UPDATE foods SET name=#{name},price=#{price} WHERE id=#{id}
+    </update>
+    <select id="lookPriceInOrder" parameterType="www.jisheng.po.Food" resultType="www.jisheng.po.Food">
+        SELECT id,store_id,name,price,uuidname,savepath FROM foods WHERE store_id=#{food.store_id}
+        AND name LIKE #{food.name} ORDER BY price
+        <if test="isAsc==true ">
+        ASC
+        </if>
+        <if test="isAsc==false">
+        DESC
+        </if>
+    </select>
+    <select id="lookPath" resultType="www.jisheng.po.Food" parameterType="www.jisheng.po.Food" >
+        SELECT id,store_id,name,price,uuidname,savepath FROM foods WHERE id=#{id}
+    </select>
+</mapper>

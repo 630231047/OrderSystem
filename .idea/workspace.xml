@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cfa186fa-c787-4d8e-9ebd-6e1bb8f0a268" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/OrderSystem-bo/src/main/java/com/zzz/bo/AdminLookRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/AssessDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/FoodDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/OrderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/RoleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/StorerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/AssessDAO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/CustomerDAO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/FoodDAO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/OrderDAO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/RoleDAO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/StorerDAO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/test/java/OrderDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderSystem-dao/src/test/java/StorerDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-dao/firestorm.log" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-dao/firestorm.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-dao/firestorm.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-dao/firestorm.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/AdminDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/AdminDAO.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-dao/src/test/java/ClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-dao/src/test/java/ClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Assess.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Assess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Storer.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Storer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderSystem-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderSystem-service/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-dao/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-service/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-controler/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-filter/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-util/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-controller/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-po/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-web/target/" />
+    <ignored path="$PROJECT_DIR$/OrderSystem-bo/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="OrderSystem" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AdminDAO.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/AdminDAO.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminLookRole.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrderSystem-bo/src/main/java/com/zzz/bo/AdminLookRole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrderSystem-bo/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/AdminDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1092">
+              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssessDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/AssessDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FoodDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/FoodDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrderSystem-po/src/main/java/com/jisheng/po/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/mybatis-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>,nu</find>
+      <find>T t</find>
+      <find>,?</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>#{}</replace>
+      <replace>Order order</replace>
+      <replace>Storer storer</replace>
+      <replace>,#{}</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/OrderSystem-po/src/main/java/po/Assess.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-controller/src/main/java/controller/RegisterServlet.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-service/src/main/java/service/StorerService.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-service/pom.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/Mapper/AdminDAOMapper.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-util/pom.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-controller/pom.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/BaseDAO.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/config.properties" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/User.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-service/src/main/java/service/UserService.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-service/src/main/java/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-service/src/main/java/www/jisheng/service/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-service/src/main/java/www/jisheng/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/User.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/UserDAO.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-util/src/main/java/www/jisheng/util/SessionUtil.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/CustomerDao.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Customer.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/CustomerDAO.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/FoodDao.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/CustomerDAO.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Food.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/FoodDAO.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/FoodDAO.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Assess.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/OrderDao.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/OrderDAO.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Order.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/OrderDAO.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/test/java/OrderDAOTest.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/RoleDao.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/AssessDao.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/RoleDAO.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Role.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/test/java/ClassTest.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/AssessDAO.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/RoleDAO.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/StorerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/StorerDao.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-po/src/main/java/www/jisheng/po/Storer.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/StorerDAO.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/test/java/StorerDAOTest.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-bo/src/main/java/www/zzz/bo/AdminLookRole.java" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/AdminDAO.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/AdminDAO.xml" />
+        <option value="$PROJECT_DIR$/OrderSystem-dao/src/main/resources/mybatis-config.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="OrderSystem-parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="OrderSystem-parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OrderSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrderSystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OrderSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrderSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderSystem-dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OrderSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrderSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderSystem-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OrderSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrderSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderSystem-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OrderSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrderSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderSystem-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OrderSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrderSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderSystem-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OrderSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrderSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderSystem-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Program Files\ideaWorkplace\OrderSystem\OrderSystem-util\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="www.jisheng.dao" />
+      <recent name="" />
+      <recent name="www.jisheng.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Program Files\ideaWorkplace\OrderSystem\OrderSystem-po\src\main\java\www\jisheng\po" />
+      <recent name="E:\Program Files\ideaWorkplace\OrderSystem\OrderSystem-dao\src\main\resources" />
+      <recent name="E:\Program Files\ideaWorkplace\OrderSystem\OrderSystem-util\src\main\resources" />
+      <recent name="E:\Program Files\ideaWorkplace\OrderSystem\OrderSystem-service\src\main\java" />
+      <recent name="E:\Program Files\ideaWorkplace\OrderSystem\OrderSystem-controller\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.StorerDAOTest.testOO">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ClassTest.testOO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OrderSystem-dao" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ClassTest" />
+      <option name="METHOD_NAME" value="testOO" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="OrderDAOTest.testOO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OrderSystem-dao" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderDAOTest" />
+      <option name="METHOD_NAME" value="testOO" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="StorerDAOTest.testOO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OrderSystem-dao" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StorerDAOTest" />
+      <option name="METHOD_NAME" value="testOO" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.ClassTest.testOO" />
+      <item itemvalue="JUnit.OrderDAOTest.testOO" />
+      <item itemvalue="JUnit.StorerDAOTest.testOO" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StorerDAOTest.testOO" />
+        <item itemvalue="JUnit.ClassTest.testOO" />
+        <item itemvalue="JUnit.OrderDAOTest.testOO" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfa186fa-c787-4d8e-9ebd-6e1bb8f0a268" name="Default" comment="" />
+      <created>1531723567103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1531723567103</updated>
+      <workItem from="1531723570606" duration="26719000" />
+      <workItem from="1531790647911" duration="8924000" />
+      <workItem from="1531810923845" duration="10528000" />
+      <workItem from="1531826384339" duration="11849000" />
+    </task>
+    <task id="LOCAL-00001" summary="create a repository">
+      <created>1531791400744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1531791400744</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="OrderDAOTest_testOO - 2018.07.17 at 21h 19m 34s.xml">
+      <configuration name="OrderDAOTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderDAOTest_testOO - 2018.07.17 at 21h 20m 49s.xml">
+      <configuration name="OrderDAOTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassTest_testOO - 2018.07.17 at 21h 20m 56s.xml">
+      <configuration name="ClassTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClassTest_testOO - 2018.07.17 at 21h 21m 54s.xml">
+      <configuration name="ClassTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorerDAOTest_testOO - 2018.07.17 at 21h 59m 36s.xml">
+      <configuration name="StorerDAOTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorerDAOTest_testOO - 2018.07.17 at 22h 01m 50s.xml">
+      <configuration name="StorerDAOTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorerDAOTest_testOO - 2018.07.17 at 22h 02m 47s.xml">
+      <configuration name="StorerDAOTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorerDAOTest_testOO - 2018.07.17 at 22h 06m 08s.xml">
+      <configuration name="StorerDAOTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorerDAOTest_testOO - 2018.07.17 at 22h 07m 54s.xml">
+      <configuration name="StorerDAOTest.testOO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorerDAOTest_testOO - 2018.07.17 at 22h 09m 32s.xml">
+      <configuration name="StorerDAOTest.testOO" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="58020000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.21793103" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3281075" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.30235162" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32995737" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946696" weight="0.32922733" />
+      <window_info anchor="bottom" x="0" y="327" width="1536" height="169" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.28107503" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48769575" visible="true" weight="0.14605543" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3294271" />
+      <window_info id="Structure" order="1" sideWeight="0.51079136" side_tool="true" weight="0.1484375" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.51230425" side_tool="true" weight="0.13486141" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create a repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a repository" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="30" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.m2/repository/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/User.java" />
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/AssessService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/FoodService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/StorerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/impl/ServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-854">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/www/jisheng/service/impl/Singleton1.java" />
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.zzz.OrderSystem:OrderSystem-parent:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.zzz.OrderSystem:OrderSystem-parent:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-parent:1.0-SNAPSHOT</node>
+            <node x="" y="">mysql:mysql-connector-java:jar:5.1.29</node>
+            <node x="" y="">junit:junit:jar:4.11</node>
+            <node x="" y="">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">log4j:log4j:jar:1.2.17</node>
+            <node x="" y="">org.slf4j:slf4j-api:jar:1.7.12</node>
+            <node x="" y="">org.slf4j:slf4j-log4j12:jar:1.7.12</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-util:jar:1.0-SNAPSHOT</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-util:jar:1.0-SNAPSHOT/com.mchange:c3p0:jar:0.9.5.2</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-util:jar:1.0-SNAPSHOT/com.mchange:c3p0:jar:0.9.5.2/com.mchange:mchange-commons-java:jar:0.2.11</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-util:jar:1.0-SNAPSHOT/org.mybatis:mybatis:jar:3.3.0</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-po:jar:1.0-SNAPSHOT</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="385.0" y="140.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.zzz.OrderSystem:OrderSystem-dao:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.zzz.OrderSystem:OrderSystem-dao:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-dao:1.0-SNAPSHOT</node>
+            <node x="" y="">org.mybatis:mybatis:jar:3.3.0</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-util:jar:1.0-SNAPSHOT</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-util:jar:1.0-SNAPSHOT/com.mchange:c3p0:jar:0.9.5.2</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-util:jar:1.0-SNAPSHOT/com.mchange:c3p0:jar:0.9.5.2/com.mchange:mchange-commons-java:jar:0.2.11</node>
+            <node x="" y="">com.zzz.OrderSystem:OrderSystem-po:jar:1.0-SNAPSHOT</node>
+            <node x="" y="">mysql:mysql-connector-java:jar:5.1.29</node>
+            <node x="" y="">junit:junit:jar:4.11</node>
+            <node x="" y="">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">log4j:log4j:jar:1.2.17</node>
+            <node x="" y="">org.slf4j:slf4j-api:jar:1.7.12</node>
+            <node x="" y="">org.slf4j:slf4j-log4j12:jar:1.7.12</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="372.0" y="190.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-util/src/main/java/com/jisheng/util/SessionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-po/src/main/java/com/jisheng/po/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f667ba09-50e3-43ea-a7d7-29ca1d901608/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-service/src/main/java/com/jisheng/service/impl/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/UserDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-po/src/main/java/com/jisheng/po/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/CustomerDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/FoodDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-po/src/main/java/com/jisheng/po/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-po/src/main/java/com/jisheng/po/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/OrderDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-po/src/main/java/com/jisheng/po/Assess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/AssessDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/www/jisheng/dao/StorerDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/RoleDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/test/java/OrderDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/test/java/StorerDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/StorerDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/StorerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/test/java/ClassTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-po/src/main/java/com/jisheng/po/Storer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/OrderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/CustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/AssessDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/RoleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/FoodDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-po/src/main/java/com/jisheng/po/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-bo/src/main/java/com/zzz/bo/AdminLookRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-bo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/java/com/jisheng/dao/AdminDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="51" lean-forward="true" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/AdminDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderSystem-dao/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>OrderSystem-web:Web exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web|OrderSystem-web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: javax.servlet:javax.servlet-api:3.1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

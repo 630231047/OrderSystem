@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jisheng.dao.RoleDAO">
+    <insert id="add" parameterType="com.jisheng.po.Role">
+        INSERT INTO roles (id,user_id,role_id) values(null,#{user_id},#{role_id})
+    </insert>
+    <delete id="remove" parameterType="com.jisheng.po.Role">
+        delete from roles where user_id=#{user_id} and role_id=#{role_id}
+    </delete>
+    <select id="lookAll" resultType="com.jisheng.po.Role">
+        select * from roles
+    </select>
+</mapper>
