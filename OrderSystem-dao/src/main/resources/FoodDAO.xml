@@ -23,7 +23,7 @@
         DESC
         </if>
     </select>
-    <select id="lookPath" resultType="com.jisheng.po.Food" parameterType="com.jisheng.po.Food" >
+    <select id="lookPath" parameterType="com.jisheng.po.Food" resultType="com.jisheng.po.Food">
         SELECT id,store_id,name,price,uuidname,savepath FROM foods WHERE id=#{id}
     </select>
 </mapper>

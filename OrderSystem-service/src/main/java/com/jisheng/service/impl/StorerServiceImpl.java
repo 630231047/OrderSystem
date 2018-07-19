@@ -1,60 +1,127 @@
 package com.jisheng.service.impl;
 
-import com.zengjisheng.www.dao.impl.StorerDaoImpl;
-import com.zengjisheng.www.po.Storer;
-import com.zengjisheng.www.service.StorerService;
+
+import com.jisheng.dao.StorerDAO;
+import com.jisheng.po.Storer;
+import com.jisheng.service.StorerService;
+import com.jisheng.util.SessionUtil;
+import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
-public class StorerServiceImpl implements StorerService{
-	StorerDaoImpl<Storer> storerDaoImpl= new StorerDaoImpl<Storer>();
-	@Override
-	public boolean addStorer(Storer storer) {
-		return storerDaoImpl.add(storer);
-	}
+public class StorerServiceImpl implements StorerService {
+    private StorerDAO storerDAOImpl;
+    private SqlSession sqlSession;
 
-	@Override
-	public boolean removeStorer(Storer storer) {
-		return storerDaoImpl.remove(storer);
-	}
+    private void openSqlSession() {
+        sqlSession = SessionUtil.openSqlSession();
+        storerDAOImpl = sqlSession.getMapper(StorerDAO.class);
+    }
 
-	@Override
-	public List<Storer> lookSomeOne(Storer storer) {
-		return storerDaoImpl.lookSomeOne(storer);
-	}
+    private void closeSqlSession() {
+        sqlSession.close();
+    }
 
-	@Override
-	public List<Storer> lookAll() {
-		return storerDaoImpl.lookAll();
-	}
+    public StorerServiceImpl() {
+    }
 
-	@Override
-	public Storer lookSomeOne1(Storer storer) {
-		return storerDaoImpl.lookSomeOne1(storer);
-	}
+    @Override
+    public boolean addStorer(Storer storer) {
+        try {
+            openSqlSession();
+            return storerDAOImpl.add(storer);
+        } finally {
+            closeSqlSession();
+        }
+    }
 
-	@Override
-	public boolean updateStorer(Storer storer) {
-		return storerDaoImpl.update(storer);
-	}
+    @Override
+    public boolean removeStorer(Storer storer) {
+        try {
+            openSqlSession();
+            return storerDAOImpl.remove(storer);
+        } finally {
+            closeSqlSession();
+        }
+    }
 
-	@Override
-	public boolean updateMark(Storer storer) {
-		return storerDaoImpl.updateMark(storer);
-	}
+    @Override
+    public List<Storer> lookSomeOne(Storer storer) {
+        try {
+            openSqlSession();
+            return storerDAOImpl.lookSomeOne(storer);
+        } finally {
+            closeSqlSession();
+        }
+    }
 
-	@Override
-	public List<Storer> lookAllApply() {
-		return storerDaoImpl.lookAllApply();
-	}
+    @Override
+    public List<Storer> lookAll() {
+        try {
+            openSqlSession();
+            return storerDAOImpl.lookAll();
+        } finally {
+            closeSqlSession();
+        }
+    }
 
-	@Override
-	public boolean updateStatus(Storer storer) {
-		return storerDaoImpl.updateStatus(storer);
-	}
+    @Override
+    public Storer lookSomeOne1(Storer storer) {
+        try {
+            openSqlSession();
+            return storerDAOImpl.lookSomeOne1(storer);
+        } finally {
+            closeSqlSession();
+        }
+    }
 
-	@Override
-	public List<Storer> lookSomeOne2(Storer storer) {
-		return storerDaoImpl.lookSomeOne2(storer);
-	}
+    @Override
+    public boolean updateStorer(Storer storer) {
+        try {
+            openSqlSession();
+            return storerDAOImpl.update(storer);
+        } finally {
+            closeSqlSession();
+        }
+    }
+
+    @Override
+    public boolean updateMark(Storer storer) {
+        try {
+            openSqlSession();
+            return storerDAOImpl.updateMark(storer);
+        } finally {
+            closeSqlSession();
+        }
+    }
+
+    @Override
+    public List<Storer> lookAllApply() {
+        try {
+            openSqlSession();
+            return storerDAOImpl.lookAllApply();
+        } finally {
+            closeSqlSession();
+        }
+    }
+
+    @Override
+    public boolean updateStatus(Storer storer) {
+        try {
+            openSqlSession();
+            return storerDAOImpl.updateStatus(storer);
+        } finally {
+            closeSqlSession();
+        }
+    }
+
+    @Override
+    public List<Storer> lookSomeOne2(Storer storer) {
+        try {
+            openSqlSession();
+            return storerDAOImpl.lookSomeOne2(storer);
+        } finally {
+            closeSqlSession();
+        }
+    }
 }

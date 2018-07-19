@@ -1,9 +1,10 @@
 package com.jisheng.dao;
 
 
+import com.jisheng.po.User;
 import org.apache.ibatis.annotations.Param;
 
-public interface UserDAO<User> extends BaseDAO<User>{
+public interface UserDAO extends BaseDAO<User>{
 	/**
 	 * 判断密码是否正确
 	 * 

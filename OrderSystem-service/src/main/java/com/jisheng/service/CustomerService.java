@@ -1,6 +1,7 @@
 package com.jisheng.service;
 
-import com.zengjisheng.www.po.Customer;
+
+import com.jisheng.po.Customer;
 
 import java.util.List;
 
@@ -8,7 +9,7 @@ public interface CustomerService {
 	/**
 	 * 添加新顾客
 	 * 
-	 * @param user
+	 * @param customer
 	 *            新顾客
 	 * @return true - 添加成功 false - 添加失败
 	 */

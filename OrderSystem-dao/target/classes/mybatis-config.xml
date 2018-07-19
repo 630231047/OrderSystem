@@ -6,7 +6,7 @@
     <properties resource="config.properties"/>
     <typeAliases>
         <!--<typeAlias type="model.Classes" alias="Classes"/>-->
-        <package name="www.jisheng.dao"/>
+        <package name="com.jisheng.dao"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">

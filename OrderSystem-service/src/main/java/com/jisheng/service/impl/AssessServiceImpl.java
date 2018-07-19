@@ -1,48 +1,84 @@
 package com.jisheng.service.impl;
 
-import com.zengjisheng.www.dao.AssessDao;
-import com.zengjisheng.www.dao.impl.AssessDaoImpl;
-import com.zengjisheng.www.po.Assess;
-import com.zengjisheng.www.service.AssessService;
+
+import com.jisheng.dao.AssessDAO;
+import com.jisheng.po.Assess;
+import com.jisheng.service.AssessService;
+import com.jisheng.util.SessionUtil;
+import org.apache.ibatis.session.SqlSession;
 
 import java.io.File;
 import java.util.List;
 
 public class AssessServiceImpl implements AssessService {
-	private AssessDao<Assess> assDao = new AssessDaoImpl();
-
+	private AssessDAO assessDAOImpl;
+	private SqlSession sqlSession;
+	private void openSqlSession(){
+		sqlSession = SessionUtil.openSqlSession();
+		assessDAOImpl = sqlSession.getMapper(AssessDAO.class);
+	}
+	private void closeSqlSession(){
+		sqlSession.close();
+	}
+	public AssessServiceImpl() {
+	}
 	@Override
 	public boolean add(Assess assess) {
-		return assDao.add(assess);
+		openSqlSession();
+		boolean succeed= assessDAOImpl.add(assess);
+		closeSqlSession();
+		return succeed;
 	}
 
 	@Override
 	public boolean remove(Assess assess) {
-		Assess ass = assDao.lookPath(assess);
-		String uuidname = ass.getUuidname();
-		String savepath = ass.getSavepath();
-		new File("E:/Program Files/javaee/FoodSystem/web/uploadAccess" + savepath + "/" + uuidname).delete();
-		return assDao.remove(assess);
+		openSqlSession();
+		Assess assess1= assessDAOImpl.lookPath(assess);
+		String uuidname = assess1.getUuidname();
+		String savepath = assess1.getSavepath();
+		new File("E:/Program Files/javaee/FoodSystem/webContent/uploadAccess" + savepath + "/" + uuidname).delete();
+		closeSqlSession();
+		return assessDAOImpl.remove(assess);
 	}
 
 	@Override
 	public List<Assess> lookSomeOne(Assess assess) {
-		return assDao.lookSomeOne(assess);
+		try {
+			openSqlSession();
+			return assessDAOImpl.lookSomeOne(assess);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public float getStoreMark(Assess assess) {
-		return assDao.getStoreMark(assess);
+		try {
+			openSqlSession();
+			return assessDAOImpl.getStoreMark(assess);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Assess> lookAll() {
-		return assDao.lookAll();
+		try {
+			openSqlSession();
+			return assessDAOImpl.lookAll();
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public Assess lookPath(Assess assess) {
-		return assDao.lookPath(assess);
+		try {
+			openSqlSession();
+			return assessDAOImpl.lookPath(assess);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 }

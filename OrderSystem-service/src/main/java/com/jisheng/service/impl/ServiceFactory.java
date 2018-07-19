@@ -1,6 +1,6 @@
 package com.jisheng.service.impl;
 
-import com.zengjisheng.www.service.*;
+import com.jisheng.service.*;
 
 /**
  * 用简单工厂加枚举单例来实现只有一个service对象

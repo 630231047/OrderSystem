@@ -1,6 +1,10 @@
 package com.jisheng.dao;
 
+import com.jisheng.bo.LookCusOrder1;
+import com.jisheng.bo.LookCusPaidOrder;
+import com.jisheng.bo.LookCusStatusOrder;
 import com.jisheng.po.Order;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,11 +18,11 @@ public interface OrderDAO extends BaseDAO<Order>{
 	/**
 	 * 查看某个顾客的订单高级版
 	 */
-	public List<Object[]> lookCusOrder1(Order order);
+	public List<LookCusOrder1> lookCusOrder1(Order order);
 	/**
 	 * 商家查看某个顾客已付款的订单
 	 */
-	public List<Object[]> lookCusPaidOrder(Order order);
+	public List<LookCusPaidOrder> lookCusPaidOrder(Order order);
 	/**
 	 * 通过orders.id来查看某个订单信息
 	 */
@@ -38,5 +42,5 @@ public interface OrderDAO extends BaseDAO<Order>{
 	/**
 	 * 查看某个顾客某个状态的订单
 	 */
-	public List<Object[]> lookCusStatusOrder(Order order, String status);
+	public List<LookCusStatusOrder> lookCusStatusOrder(@Param("order") Order order, @Param("status") String status);
 }

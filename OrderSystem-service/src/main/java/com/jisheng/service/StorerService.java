@@ -8,7 +8,7 @@ public interface StorerService {
 	/**
 	 * 添加新商铺
 	 * 
-	 * @param user
+	 * @param storer
 	 *            新用户
 	 * @return true - 添加成功 false - 添加失败
 	 */
@@ -50,7 +50,7 @@ public interface StorerService {
 	public boolean updateStatus(Storer storer);
 	/**
 	 * 通过store_name来查找状态为正常的商家
-	 * @param t
+	 * @param storer
 	 * @return
 	 */
 	public List<Storer> lookSomeOne2(Storer storer);

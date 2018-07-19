@@ -1,73 +1,139 @@
 package com.jisheng.service.impl;
 
-import com.zengjisheng.www.dao.OrderDao;
-import com.zengjisheng.www.dao.impl.OrderDaoImpl;
-import com.zengjisheng.www.po.Order;
-import com.zengjisheng.www.service.OrderService;
+import com.jisheng.dao.OrderDAO;
+import com.jisheng.po.Order;
+import com.jisheng.service.OrderService;
+import com.jisheng.util.SessionUtil;
+import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
 public class OrderServiceImpl implements OrderService {
-	private OrderDao<Order> orderDao = new OrderDaoImpl<Order>();
+	private OrderDAO orderDAOImpl;
+	private SqlSession sqlSession;
+	private void openSqlSession(){
+		sqlSession = SessionUtil.openSqlSession();
+		orderDAOImpl = sqlSession.getMapper(OrderDAO.class);
+	}
+	private void closeSqlSession(){
+		sqlSession.close();
+	}
+	public OrderServiceImpl() {
+	}
 
 	@Override
 	public boolean addOrder(Order order) {
-		return orderDao.add(order);
+		try {
+			openSqlSession();
+			return orderDAOImpl.add(order);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean removeOrder(Order order) {
-		return orderDao.remove(order);
+		try {
+			openSqlSession();
+			return orderDAOImpl.remove(order);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Order> lookSomeOne(Order order) {
-		return orderDao.lookSomeOne(order);
+		openSqlSession();
+		return orderDAOImpl.lookSomeOne(order);
 	}
 
 	@Override
 	public List<Order> lookAll() {
-		return orderDao.lookAll();
+		try {
+			openSqlSession();
+			return orderDAOImpl.lookAll();
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean updateOrder(Order order) {
-		return orderDao.update(order);
+		try {
+			openSqlSession();
+			return orderDAOImpl.update(order);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Order> lookCusOrder(Order order) {
-		return orderDao.lookCusOrder(order);
+		try {
+			openSqlSession();
+			return orderDAOImpl.lookCusOrder(order);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Object[]> lookCusOrder1(Order order) {
-		return orderDao.lookCusOrder1(order);
+		try {
+			openSqlSession();
+//			return orderDAOImpl.lookCusOrder1(order);
+			return null;
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public Order lookCusOrder2(Order order) {
-		return orderDao.lookCusOrder2(order);
+		try {
+			openSqlSession();
+			return orderDAOImpl.lookCusOrder2(order);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Object[]> lookCusPaidOrder(Order order) {
-		return orderDao.lookCusPaidOrder(order);
+		try {
+			openSqlSession();
+//			return orderDAOImpl.lookCusPaidOrder(order);
+			return null;
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Order> lookFoodState(Order order) {
-		return orderDao.lookFoodState(order);
+		try {
+			openSqlSession();
+			return orderDAOImpl.lookFoodState(order);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Order> lookCanDelOrder() {
-		return orderDao.lookCanDelOrder();
+		openSqlSession();
+		return orderDAOImpl.lookCanDelOrder();
 	}
 
 	@Override
 	public List<Object[]> lookCusStatusOrder(Order order, String status) {
-		return orderDao.lookCusStatusOrder(order, status);
+		try {
+			openSqlSession();
+//			return orderDAOImpl.lookCusStatusOrder(order, status);
+			return null;
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 }

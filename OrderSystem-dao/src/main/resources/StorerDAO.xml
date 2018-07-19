@@ -18,7 +18,7 @@
     </select>
     <select id="lookSomeOne2" parameterType="com.jisheng.po.Storer" resultType="com.jisheng.po.Storer">
         SELECT store_id,user_id,store_name,store_address,avg_mark,status FROM stores
-        WHERE status='正常' AND store_name LIKE #{store_name} ORDER BY avg_mark DESC
+        WHERE status='正常' AND store_name LIKE concat('%', #{store_name}, '%') ORDER BY avg_mark DESC
     </select>
     <select id="lookAll" resultType="com.jisheng.po.Storer">
         SELECT store_id,user_id,store_name,store_address,avg_mark,status

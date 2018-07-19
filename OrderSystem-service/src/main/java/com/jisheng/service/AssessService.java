@@ -1,6 +1,6 @@
 package com.jisheng.service;
 
-import com.zengjisheng.www.po.Assess;
+import com.jisheng.po.Assess;
 
 import java.util.List;
 

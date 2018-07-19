@@ -1,34 +1,60 @@
 package com.jisheng.service.impl;
 
-import com.zengjisheng.www.dao.FoodDao;
-import com.zengjisheng.www.dao.impl.FoodDaoImpl;
-import com.zengjisheng.www.po.Food;
-import com.zengjisheng.www.po.Storer;
-import com.zengjisheng.www.service.FoodService;
+
+import com.jisheng.dao.FoodDAO;
+import com.jisheng.po.Food;
+import com.jisheng.po.Storer;
+import com.jisheng.service.FoodService;
+import com.jisheng.util.SessionUtil;
+import org.apache.ibatis.session.SqlSession;
 
 import java.io.File;
 import java.util.List;
 
 public class FoodServiceImpl implements FoodService {
-	private FoodDao<Food> foodDao = new FoodDaoImpl<>();
-
+	private FoodDAO foodDAOImpl;
+	private SqlSession sqlSession;
+	private void openSqlSession(){
+		sqlSession = SessionUtil.openSqlSession();
+		foodDAOImpl = sqlSession.getMapper(FoodDAO.class);
+	}
+	private void closeSqlSession(){
+		sqlSession.close();
+	}
+	public FoodServiceImpl() {
+	}
 	@Override
 	public boolean addFood(Food food) {
-		return foodDao.add(food);
+		try {
+			openSqlSession();
+			return foodDAOImpl.add(food);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean removeFood(Food food) {
-		Food f = foodDao.lookPath(food);
-		String uuidname = f.getUuidname();
-		String savepath = f.getSavepath();
-		new File("E:/Program Files/javaee/FoodSystem/web/upload" + savepath + "/" + uuidname).delete();
-		return foodDao.remove(food);
+		try {
+			openSqlSession();
+			Food food1 = foodDAOImpl.lookPath(food);
+			String uuidname = food1.getUuidname();
+			String savepath = food1.getSavepath();
+			new File("E:/Program Files/javaee/FoodSystem/webContent/upload" + savepath + "/" + uuidname).delete();
+			return foodDAOImpl.remove(food);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Food> lookSomeOne(Food food) {
-		return foodDao.lookSomeOne(food);
+		try {
+			openSqlSession();
+			return foodDAOImpl.lookSomeOne(food);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
@@ -39,16 +65,31 @@ public class FoodServiceImpl implements FoodService {
 
 	@Override
 	public boolean updateFood(Food food) {
-		return foodDao.update(food);
+		try {
+			openSqlSession();
+			return foodDAOImpl.update(food);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Food> lookPriceInOrder(Food food, boolean isAsc) {
-		return foodDao.lookPriceInOrder(food, isAsc);
+		try {
+			openSqlSession();
+			return foodDAOImpl.lookPriceInOrder(food, isAsc);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public Food lookPath(Food food) {
-		return foodDao.lookPath(food);
+		try {
+			openSqlSession();
+			return foodDAOImpl.lookPath(food);
+		} finally {
+			closeSqlSession();
+		}
 	}
 }

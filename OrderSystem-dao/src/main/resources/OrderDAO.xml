@@ -22,12 +22,12 @@
     <select id="lookCusOrder" resultType="com.jisheng.po.Order">
         SELECT id,customer_id,food_id,status,num,store_id FROM orders WHERE customer_id=#{customer_id}
     </select>
-    <!--<select id="lookCusOrder1">-->
-        <!--SELECT orders.id,foods.name,status,num,foods.price -->
-        <!--FROM orders LEFT JOIN foods ON orders.food_id=foods.id-->
-        <!--WHERE orders.customer_id=#{customer_id} AND orders.store_id=#{store_id}-->
-        <!--AND orders.status='购物车'-->
-    <!--</select>-->
+    <select id="lookCusOrder1" parameterType="com.jisheng.po.Order" resultType="com.jisheng.bo.LookCusOrder1">
+        SELECT orders.id,foods.name,status,num,foods.price
+        FROM orders LEFT JOIN foods ON orders.food_id=foods.id
+        WHERE orders.customer_id=#{customer_id} AND orders.store_id=#{store_id}
+        AND orders.status='购物车'
+    </select>
     <select id="lookCusOrder2" parameterType="com.jisheng.po.Order" resultType="com.jisheng.po.Order">
         SELECT id,customer_id,food_id,status,num,store_id FROM orders WHERE orders.id=#{id}
     </select>
@@ -39,18 +39,18 @@
         SELECT id,customer_id,food_id,status,num,store_id,date
         FROM orders WHERE status='无' OR status='已评价'
     </select>
-    <!--<select id="lookCusStatusOrder" >-->
-        <!--SELECT orders.id,foods.name,orders.status,num,-->
-            <!--foods.price,date,stores.store_name,orders.store_id-->
-            <!--FROM orders LEFT JOIN foods ON orders.food_id=foods.id-->
-            <!--LEFT JOIN stores ON orders.store_id=stores.store_id-->
-            <!--WHERE orders.customer_id=#{customer_id} AND orders.status=#{status}-->
-    <!--</select>-->
-    <!--<select id="lookCusPaidOrder" parameterType="Order">-->
-    <!--SELECT orders.id,foods.name,status,num,foods.price,customers.name, -->
-        <!--customers.phone,customers.address FROM orders LEFT JOIN foods ON orders.food_id=foods.id-->
-        <!--LEFT JOIN customers ON orders.customer_id=customers.id  WHERE orders.store_id=#{store_id}-->
-        <!--AND orders.status='已付款'-->
-    <!--</select>-->
+    <select id="lookCusStatusOrder" resultType="com.jisheng.bo.LookCusStatusOrder" >
+        SELECT orders.id,foods.name,orders.status,num,
+            foods.price,date,stores.store_name,orders.store_id
+            FROM orders LEFT JOIN foods ON orders.food_id=foods.id
+            LEFT JOIN stores ON orders.store_id=stores.store_id
+            WHERE orders.customer_id=#{order.customer_id} AND orders.status=#{status}
+    </select>
+    <select id="lookCusPaidOrder" parameterType="com.jisheng.po.Order" resultType="com.jisheng.bo.LookCusPaidOrder">
+    SELECT orders.id,foods.name foodName,status,num,foods.price,customers.name customerName,
+        customers.phone,customers.address FROM orders LEFT JOIN foods ON orders.food_id=foods.id
+        LEFT JOIN customers ON orders.customer_id=customers.id  WHERE orders.store_id=#{store_id}
+        AND orders.status='已付款'
+    </select>
 
 </mapper>

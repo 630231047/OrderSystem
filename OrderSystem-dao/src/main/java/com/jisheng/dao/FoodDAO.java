@@ -1,10 +1,11 @@
 package com.jisheng.dao;
 
+import com.jisheng.po.Food;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface FoodDAO<Food> extends BaseDAO<Food>{
+public interface FoodDAO extends BaseDAO<Food>{
 	/**
 	 * 按照价钱对信息进行指定排序
 	 */

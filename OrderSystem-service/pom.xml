@@ -13,14 +13,15 @@
     <dependencies>
         <dependency>
             <groupId>com.zzz.OrderSystem</groupId>
-            <artifactId>OrderSystem-www.jisheng.po</artifactId>
+            <artifactId>OrderSystem-dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.zzz.OrderSystem</groupId>
-            <artifactId>OrderSystem-po</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.8.3</version>
         </dependency>
+
     </dependencies>
 
 

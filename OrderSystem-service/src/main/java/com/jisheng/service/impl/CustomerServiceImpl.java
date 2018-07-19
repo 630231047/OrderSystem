@@ -1,38 +1,75 @@
 package com.jisheng.service.impl;
 
-import com.zengjisheng.www.dao.CustomerDao;
-import com.zengjisheng.www.dao.impl.CustomerDaoImpl;
-import com.zengjisheng.www.po.Customer;
-import com.zengjisheng.www.service.CustomerService;
+
+import com.jisheng.dao.CustomerDAO;
+import com.jisheng.po.Customer;
+import com.jisheng.service.CustomerService;
+import com.jisheng.util.SessionUtil;
+import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
-	private CustomerDao<Customer> customerDao = new CustomerDaoImpl<Customer>();
+	private CustomerDAO customerDAOImpl;
+	private SqlSession sqlSession;
+	private void openSqlSession(){
+		sqlSession = SessionUtil.openSqlSession();
+		customerDAOImpl = sqlSession.getMapper(CustomerDAO.class);
+	}
+	private void closeSqlSession(){
+		sqlSession.close();
+	}
+	public CustomerServiceImpl() {
+	}
 
 	@Override
 	public boolean addCustomer(Customer customer) {
-		return customerDao.add(customer);
+		try {
+			openSqlSession();
+			return customerDAOImpl.add(customer);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean removeCustomer(Customer customer) {
-		return customerDao.remove(customer);
+		try {
+			openSqlSession();
+			return customerDAOImpl.remove(customer);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean updateCustomer(Customer customer) {
-		return customerDao.update(customer);
+		try {
+			openSqlSession();
+			return customerDAOImpl.update(customer);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Customer> lookSomeOne(Customer customer) {
-		return customerDao.lookSomeOne(customer);
+		try {
+			openSqlSession();
+			return customerDAOImpl.lookSomeOne(customer);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public List<Customer> lookAll() {
-		return customerDao.lookAll();
+		try {
+			openSqlSession();
+			return customerDAOImpl.lookAll();
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 }

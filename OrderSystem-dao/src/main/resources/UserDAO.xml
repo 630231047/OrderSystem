@@ -4,9 +4,9 @@
     <insert id="add" parameterType="com.jisheng.po.User" useGeneratedKeys="true" keyProperty="user_id">
         INSERT INTO users (username,password) values(#{username},#{password})
     </insert>
-    <delete id="removeCusRole" parameterType="com.jisheng.po.User">
-        DELETE FROM userandrole WHERE user_id AND role_id=#{id}
-    </delete>
+    <!--<delete id="removeCusRole" parameterType="com.jisheng.po.User">-->
+        <!--DELETE FROM userandrole WHERE user_id AND role_id=#{id}-->
+    <!--</delete>-->
     <select id="checkLoginInfo" parameterType="com.jisheng.po.User" resultType="com.jisheng.po.User">
         SELECT username,password FROM users WHERE username=#{username}
     </select>

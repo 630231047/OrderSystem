@@ -1,6 +1,6 @@
 package com.jisheng.service;
 
-import com.zengjisheng.www.po.Order;
+import com.jisheng.po.Order;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ public interface OrderService {
 	/**
 	 * 添加新订单
 	 * 
-	 * @param user
+	 * @param order
 	 *            新用户
 	 * @return true - 添加成功 false - 添加失败
 	 */
@@ -54,7 +54,7 @@ public interface OrderService {
 	/**
 	 * 查看状态为无和已评价的订单
 	 * 以便定时删除
-	 * @param t
+	 * @param
 	 * @return
 	 */
 	public List<Order>lookCanDelOrder();

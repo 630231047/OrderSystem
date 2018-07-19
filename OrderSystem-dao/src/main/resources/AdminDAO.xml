@@ -13,19 +13,18 @@
     <delete id="removeStoRole" parameterType="com.jisheng.po.User">
         DELETE FROM userandrole WHERE user_id AND role_id=#{role_id}
     </delete>
-    <select id="lookRole" parameterType="com.jisheng.po.User" resultMap="com.jisheng.bo.>
+    <select id="lookRole" parameterType="com.jisheng.po.User" resultType="com.jisheng.bo.AdminLookRole">
         SELECT userandrole.user_id,roles.role_name
-				+  FROM userandrole INNER JOIN roles
-				+  ON roles.role_id=userandrole.role_id WHERE user_id=#{user_id}
+				FROM userandrole INNER JOIN roles
+				ON roles.role_id=userandrole.role_id WHERE user_id=#{user_id}
     </select>
-    <!--<resultMap id="lookRoleList" type=""-->
-    <!--<select id="lookAll1" resultType="string">-->
-        <!--SELECT role_id,role_name FROM roles-->
-    <!--</select>-->
-    <!--<select id="geetPermRole" parameterType="string" resultType="">-->
-        <!--SELECT roles.role_name FROM roleandpermission INNER JOIN permissions -->
-				 <!--ON roleandpermission.permission_id=permissions.permission_id -->
-				 <!--INNER JOIN roles ON roles.role_id=roleandpermission.role_id -->
-				 <!--WHERE permissions.operate_name=#{url}-->
-    <!--</select> -->
+    <select id="lookAll1" resultType="com.jisheng.bo.AdminLookAll1">
+        SELECT role_id,role_name FROM roles
+    </select>
+    <select id="getPermRole" parameterType="string" resultType="string">
+        SELECT roles.role_name FROM roleandpermission INNER JOIN permissions
+				 ON roleandpermission.permission_id=permissions.permission_id
+				 INNER JOIN roles ON roles.role_id=roleandpermission.role_id
+				 WHERE permissions.operate_name=#{url}
+    </select>
 </mapper>

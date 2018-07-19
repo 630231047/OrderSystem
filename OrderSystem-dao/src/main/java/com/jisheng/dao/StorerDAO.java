@@ -1,12 +1,14 @@
 package com.jisheng.dao;
 
+import com.jisheng.po.Storer;
+
 import java.util.List;
 
-public interface StorerDAO<Storer> extends BaseDAO<Storer> {
+public interface StorerDAO extends BaseDAO<Storer> {
 	/**
 	 * 通过user_id来查找商家
 	 * 
-	 * @param t
+	 * @param storer
 	 * @return
 	 */
 	public Storer lookSomeOne1(Storer storer);
@@ -25,7 +27,7 @@ public interface StorerDAO<Storer> extends BaseDAO<Storer> {
 	/**
 	 * 通过store_name来查找状态为正常的商家
 	 * 
-	 * @param t
+	 * @param storer
 	 * @return
 	 */
 	public List<Storer> lookSomeOne2(Storer storer);

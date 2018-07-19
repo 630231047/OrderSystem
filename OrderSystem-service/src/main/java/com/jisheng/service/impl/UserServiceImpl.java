@@ -1,56 +1,96 @@
 package com.jisheng.service.impl;
 
-import com.zengjisheng.www.dao.UserDao;
-import com.zengjisheng.www.dao.impl.UserDaoImpl;
-import com.zengjisheng.www.po.User;
-import com.zengjisheng.www.service.UserService;
-import org.apache.ibatis.annotations.Param;
 
-/**
- *
- */
+import com.jisheng.dao.UserDAO;
+import com.jisheng.po.User;
+import com.jisheng.service.UserService;
+import com.jisheng.util.SessionUtil;
+import org.apache.ibatis.session.SqlSession;
+
 public class UserServiceImpl implements UserService {
+	private UserDAO userDAOImpl;
+	private SqlSession sqlSession;
 
-	private UserDao<User> dao = new UserDaoImpl<User>();
+	private void openSqlSession() {
+		sqlSession = SessionUtil.openSqlSession();
+		userDAOImpl = sqlSession.getMapper(UserDAO.class);
+	}
+
+	private void closeSqlSession() {
+		sqlSession.close();
+	}
+
+	public UserServiceImpl() {
+	}
 
 	@Override
 	public boolean addUser(User user) {
-		return dao.add(user);
+		try {
+			openSqlSession();
+			return userDAOImpl.add(user);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean checkLoginInfo(User user) {
-		String passWord= dao.checkLoginInfo(user).getPassword();
-		if(user.getPassword().equals(passWord))
-			return true;
-		else return false;
+		try {
+			openSqlSession();
+			String passWord= userDAOImpl.checkLoginInfo(user).getPassword();
+			if(user.getPassword().equals(passWord))
+				return true;
+			else return false;
+		} finally {
+				closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean updateUserPassword(User user, String password) {
-		if (checkLoginInfo(user)) {
-			return dao.updateUserPassword( user,password);
-		} else
-			return false;
+		try {
+			openSqlSession();
+			if (checkLoginInfo(user)) {
+				return userDAOImpl.updateUserPassword( user,password);
+			} else
+				return false;
+		} finally {
+				closeSqlSession();
+		}
 	}
 
 	@Override
 	public User getUserInfo(User user) {
-		return dao.getUser(user);
+		try {
+			openSqlSession();
+			return userDAOImpl.getUser(user);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean usernameIsExist(User user) {
-		User serUser = dao.getUser(user);
-		if (serUser != null)
-			return true;
-		else
-			return false;
+		try {
+			openSqlSession();
+			User serUser = userDAOImpl.getUser(user);
+			if (serUser != null)
+				return true;
+			else
+				return false;
+		} finally {
+				closeSqlSession();
+		}
 	}
 
 	@Override
 	public boolean removeUser(User user) {
-		return dao.remove(user);
+		try {
+			openSqlSession();
+			return userDAOImpl.remove(user);
+		} finally {
+			closeSqlSession();
+		}
 	}
 
 }

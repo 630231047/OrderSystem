@@ -1,7 +1,8 @@
 package com.jisheng.service;
 
-import com.zengjisheng.www.po.Food;
-import com.zengjisheng.www.po.Storer;
+
+import com.jisheng.po.Food;
+import com.jisheng.po.Storer;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ public interface FoodService {
 	/**
 	 * 添加新商品
 	 * 
-	 * @param user
+	 * @param food
 	 *            新用户
 	 * @return true - 添加成功 false - 添加失败
 	 */

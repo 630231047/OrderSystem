@@ -1,5 +1,8 @@
 package com.jisheng.dao;
 
+import com.jisheng.bo.AdminLookAll1;
+import com.jisheng.bo.AdminLookRole;
+
 import java.util.List;
 
 public interface AdminDAO<T> extends BaseDAO<T>{
@@ -32,11 +35,11 @@ public interface AdminDAO<T> extends BaseDAO<T>{
      * @param user
      * @return
      */
-     List<Object[]> lookRole(T user);
+     List<AdminLookRole> lookRole(T user);
     /**
      * 查看所有角色信息
      */
-     List<List> lookAll1();
+     List<AdminLookAll1> lookAll1();
     /**
      * 得到该URL权限对应的角色名
      */

@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="www.jisheng.dao.StorerDAO">
-    <insert id="add" parameterType="www.jisheng.po.Storer" useGeneratedKeys="true" keyProperty="store_id">
+<mapper namespace="com.jisheng.dao.StorerDAO">
+    <insert id="add" parameterType="com.jisheng.po.Storer" useGeneratedKeys="true" keyProperty="store_id">
         INSERT INTO stores (store_id,user_id,store_name,store_address,status)
         values(null,#{user_id},#{store_name},#{store_address},#{status})
     </insert>
-    <delete id="remove" parameterType="www.jisheng.po.Storer">
+    <delete id="remove" parameterType="com.jisheng.po.Storer">
         DELETE FROM stores WHERE store_id=?
     </delete>
-    <select id="lookSomeOne" parameterType="www.jisheng.po.Storer" resultType="www.jisheng.po.Storer">
+    <select id="lookSomeOne" parameterType="com.jisheng.po.Storer" resultType="com.jisheng.po.Storer">
         SELECT store_id,user_id,store_name,store_address,avg_mark,status FROM stores
         WHERE store_name LIKE #{store_name} ORDER BY avg_mark DESC
     </select>
-    <select id="lookSomeOne1" resultType="www.jisheng.po.Storer" parameterType="www.jisheng.po.Storer">
+    <select id="lookSomeOne1" resultType="com.jisheng.po.Storer" parameterType="com.jisheng.po.Storer">
         SELECT store_id,user_id,store_name,store_address,avg_mark,status
         FROM stores WHERE user_id=#{user_id}
     </select>
-    <select id="lookSomeOne2" parameterType="www.jisheng.po.Storer" resultType="www.jisheng.po.Storer">
+    <select id="lookSomeOne2" parameterType="com.jisheng.po.Storer" resultType="com.jisheng.po.Storer">
         SELECT store_id,user_id,store_name,store_address,avg_mark,status FROM stores
-        WHERE status='正常' AND store_name LIKE #{store_name} ORDER BY avg_mark DESC
+        WHERE status='正常' AND store_name LIKE concat('%', #{store_name}, '%') ORDER BY avg_mark DESC
     </select>
-    <select id="lookAll" resultType="www.jisheng.po.Storer">
+    <select id="lookAll" resultType="com.jisheng.po.Storer">
         SELECT store_id,user_id,store_name,store_address,avg_mark,status
         FROM stores WHERE status='正常' ORDER BY avg_mark DESC
     </select>
-    <update id="update" parameterType="www.jisheng.po.Storer">
+    <update id="update" parameterType="com.jisheng.po.Storer">
         UPDATE stores SET store_name=?,store_address=? WHERE store_id=#{store_id}
     </update>
-    <update id="updateMark" parameterType="www.jisheng.po.Storer">
+    <update id="updateMark" parameterType="com.jisheng.po.Storer">
         UPDATE stores SET avg_mark=#{avg_mark} WHERE store_id=#{store_id}
     </update>
-    <select id="lookAllApply" resultType="www.jisheng.po.Storer">
+    <select id="lookAllApply" resultType="com.jisheng.po.Storer">
         SELECT store_id,user_id,store_name,store_address,avg_mark,status
         FROM stores WHERE status='审核中'
     </select>
-    <update id="updateStatus" parameterType="www.jisheng.po.Storer">
+    <update id="updateStatus" parameterType="com.jisheng.po.Storer">
         UPDATE stores SET status=#{status} WHERE store_id=#{store_id}
     </update>
 </mapper>
