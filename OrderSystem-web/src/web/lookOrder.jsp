@@ -17,19 +17,19 @@
 				<tr>
 					<td>订单${s.count }
 					<td>食品:</td>
-					<td>${order[1]}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td>${order.foodName}&nbsp;&nbsp;&nbsp;&nbsp;</td>
 					<td>数量:</td>
-					<td>${order[3]}</td>
+					<td>${order.num}</td>
 					<td>单价:</td>
-					<td>${order[4]}</td>
+					<td>${order.price}</td>
 					<td>顾客名:</td>
-					<td>${order[5]}</td>
+					<td>${order.customerName}</td>
 					<td>电话号码:</td>
-					<td>${order[6]}</td>
+					<td>${order.phone}</td>
 					<td>地址:</td>
-					<td>${order[7]}</td>
+					<td>${order.address}</td>
 					<td><label><input name="isCorrect" type="checkbox"
-							value="${order[0]}" />选择 </label></td>
+							value="${order.id}" />选择 </label></td>
 
 				</tr>
 			</c:forEach>

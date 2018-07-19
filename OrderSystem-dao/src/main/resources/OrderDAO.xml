@@ -47,7 +47,7 @@
             WHERE orders.customer_id=#{order.customer_id} AND orders.status=#{status}
     </select>
     <select id="lookCusPaidOrder" parameterType="com.jisheng.po.Order" resultType="com.jisheng.bo.LookCusPaidOrder">
-    SELECT orders.id,foods.name foodName,status,num,foods.price,customers.name customerName,
+      SELECT orders.id,foods.name foodName,status,num,foods.price,customers.name customerName,
         customers.phone,customers.address FROM orders LEFT JOIN foods ON orders.food_id=foods.id
         LEFT JOIN customers ON orders.customer_id=customers.id  WHERE orders.store_id=#{store_id}
         AND orders.status='已付款'

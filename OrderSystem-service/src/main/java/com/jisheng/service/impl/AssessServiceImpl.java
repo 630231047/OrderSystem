@@ -8,6 +8,8 @@ import com.jisheng.util.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class AssessServiceImpl implements AssessService {
@@ -25,6 +27,7 @@ public class AssessServiceImpl implements AssessService {
 	@Override
 	public boolean add(Assess assess) {
 		openSqlSession();
+		assess.setDate(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 		boolean succeed= assessDAOImpl.add(assess);
 		closeSqlSession();
 		return succeed;
@@ -36,7 +39,7 @@ public class AssessServiceImpl implements AssessService {
 		Assess assess1= assessDAOImpl.lookPath(assess);
 		String uuidname = assess1.getUuidname();
 		String savepath = assess1.getSavepath();
-		new File("E:/Program Files/javaee/FoodSystem/webContent/uploadAccess" + savepath + "/" + uuidname).delete();
+		new File("E:/Program Files/ideaWorkplace/OrderSystem/OrderSystem-web/src/web/uploadAccess" + savepath + "/" + uuidname).delete();
 		closeSqlSession();
 		return assessDAOImpl.remove(assess);
 	}

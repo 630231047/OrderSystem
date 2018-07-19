@@ -1,15 +1,8 @@
 
-import com.jisheng.bo.AdminLookRole;
-import com.jisheng.bo.LookCusOrder1;
-import com.jisheng.bo.LookCusPaidOrder;
-import com.jisheng.bo.LookCusStatusOrder;
 import com.jisheng.dao.*;
-import com.jisheng.po.Order;
-import com.jisheng.po.Role;
 import com.jisheng.po.User;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
-import com.jisheng.util.SessionUtil;
 
 import java.util.List;
 

@@ -31,7 +31,7 @@ public class UploadStorerServlet extends HttpServlet {
 		Food food = new Food();
 		Storer storer = (Storer) request.getSession().getAttribute("storer");
 		food.setStore_id(storer.getStore_id());
-		upStoServl.setPath("E:/Program Files/javaee/FoodSystem/WebContent/upload");
+		upStoServl.setPath("E:/Program Files/ideaWorkplace/OrderSystem/OrderSystem-web/src/web/upload");
 		upStoServl.doGet(request, response);
 		List<String> fileList = upStoServl.getFileList();
 		if(fileList!=null) {

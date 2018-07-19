@@ -1,11 +1,16 @@
 package com.jisheng.service.impl;
 
+import com.jisheng.bo.LookCusOrder1;
+import com.jisheng.bo.LookCusPaidOrder;
+import com.jisheng.bo.LookCusStatusOrder;
 import com.jisheng.dao.OrderDAO;
 import com.jisheng.po.Order;
 import com.jisheng.service.OrderService;
 import com.jisheng.util.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class OrderServiceImpl implements OrderService {
@@ -25,6 +30,7 @@ public class OrderServiceImpl implements OrderService {
 	public boolean addOrder(Order order) {
 		try {
 			openSqlSession();
+			order.setDate(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 			return orderDAOImpl.add(order);
 		} finally {
 			closeSqlSession();
@@ -61,6 +67,7 @@ public class OrderServiceImpl implements OrderService {
 	public boolean updateOrder(Order order) {
 		try {
 			openSqlSession();
+			order.setDate(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 			return orderDAOImpl.update(order);
 		} finally {
 			closeSqlSession();
@@ -78,11 +85,11 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public List<Object[]> lookCusOrder1(Order order) {
+	public List<LookCusOrder1> lookCusOrder1(Order order) {
 		try {
 			openSqlSession();
-//			return orderDAOImpl.lookCusOrder1(order);
-			return null;
+			return orderDAOImpl.lookCusOrder1(order);
+//			return null;
 		} finally {
 			closeSqlSession();
 		}
@@ -99,11 +106,10 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public List<Object[]> lookCusPaidOrder(Order order) {
+	public List<LookCusPaidOrder> lookCusPaidOrder(Order order) {
 		try {
 			openSqlSession();
-//			return orderDAOImpl.lookCusPaidOrder(order);
-			return null;
+			return orderDAOImpl.lookCusPaidOrder(order);
 		} finally {
 			closeSqlSession();
 		}
@@ -126,11 +132,10 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public List<Object[]> lookCusStatusOrder(Order order, String status) {
+	public List<LookCusStatusOrder> lookCusStatusOrder(Order order, String status) {
 		try {
 			openSqlSession();
-//			return orderDAOImpl.lookCusStatusOrder(order, status);
-			return null;
+			return orderDAOImpl.lookCusStatusOrder(order, status);
 		} finally {
 			closeSqlSession();
 		}

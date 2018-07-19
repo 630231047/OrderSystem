@@ -16,19 +16,19 @@
 				<table>
 					<tr>
 						<td>商家名:</td>
-						<td>${order[6]}</td>
+						<td>${order.store_name}</td>
 						<td>商品名:</td>
-						<td>${order[1]}</td>
+						<td>${order.name}</td>
 						<td>状态:</td>
-						<td>${order[2]}</td>
+						<td>${order.status}</td>
 						<td>数量:</td>
-						<td>${order[3]}</td>
+						<td>${order.num}</td>
 						<td>单价:</td>
-						<td>${order[4]}元</td>
+						<td>${order.price}元</td>
 						<td>时间:</td>
-						<td>${order[5]}</td>
-						<td><input type="hidden" value="${order[0]}" name="orderId">
-						<td><input type="hidden" value="${order[7]}" name="storeId">
+						<td>${order.date}</td>
+						<td><input type="hidden" value="${order.id}" name="orderId">
+						<td><input type="hidden" value="${order.store_id}" name="storeId">
 						<td><button type="submit">进入评价</button></td>
 					</tr>
 				</table>

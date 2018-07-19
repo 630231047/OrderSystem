@@ -29,7 +29,7 @@ public class JudgeServlet extends HttpServlet {
 		String[] userIds = request.getParameterValues("isCorrect");
 		if (userIds == null) {
 			request.getSession().setAttribute("msg6", "请确认是否已选择申请信息");
-			response.sendRedirect("/FoodSystem/admin.jsp");
+			response.sendRedirect("/admin.jsp");
 			return;
 		}
 		Storer storer = new Storer();
@@ -60,7 +60,7 @@ public class JudgeServlet extends HttpServlet {
 				}
 			}
 		}
-		response.sendRedirect("/FoodSystem/GetApplyServlet");
+		response.sendRedirect("/GetApplyServlet");
 
 	}
 

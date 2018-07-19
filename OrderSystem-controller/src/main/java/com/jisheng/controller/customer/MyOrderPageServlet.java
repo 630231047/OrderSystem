@@ -1,5 +1,6 @@
 package com.jisheng.controller.customer;
 
+import com.jisheng.bo.LookCusStatusOrder;
 import com.jisheng.po.Customer;
 import com.jisheng.po.Order;
 import com.jisheng.service.OrderService;
@@ -35,12 +36,12 @@ public class MyOrderPageServlet extends HttpServlet {
 			request.getRequestDispatcher("myOrderPage.jsp").forward(request, response);
 		}
 		order.setCustomer_id(customer.getId());
-		List<Object[]> paidOrders = orderServ.lookCusStatusOrder(order, "已付款");// 得到状态为"已付款"的List
-		List<Object[]> sendOrders = orderServ.lookCusStatusOrder(order, "已送达");// 得到状态为"已送达"的List
-		List<Object[]> assessOrders = orderServ.lookCusStatusOrder(order, "已评价");// 得到状态为"已评价"的List
+		List<LookCusStatusOrder> paidOrders = orderServ.lookCusStatusOrder(order, "已付款");// 得到状态为"已付款"的List
+		List<LookCusStatusOrder> sendOrders = orderServ.lookCusStatusOrder(order, "已送达");// 得到状态为"已送达"的List
+		List<LookCusStatusOrder> assessOrders = orderServ.lookCusStatusOrder(order, "已评价");// 得到状态为"已评价"的List
 		// 将数据存到session中以便于在前端获取
 		request.getSession().setAttribute("pageSize", pageSize);
-		List<Object[]> orders = null;
+		List<LookCusStatusOrder> orders = null;
 		if (operation == null)
 			operation = "";
 		switch (operation) {

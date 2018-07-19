@@ -98,15 +98,15 @@
 			<c:forEach items="${orders}" var="order">
 				<tr>
 					<td>食品:</td>
-					<td>${order[1]}&nbsp;&nbsp;</td>
+					<td>${order.name}&nbsp;&nbsp;</td>
 					<td>数量:</td>
-					<td>${order[3]}</td>
+					<td>${order.num}</td>
 					<td>单价:</td>
-					<td>${order[4]}</td>
-					<td><input type="hidden" value="${order[3]*order[4]}"
+					<td>${order.price}</td>
+					<td><input type="hidden" value="${order.num*order.price}"
 						name="orderId">
 					<td><label><input name="isCorrect" type="checkbox"
-							value="${order[0]},${order[3]*order[4]}" />选择 </label></td>
+							value="${order.id},${order.num*order.price}" />选择 </label></td>
 
 				</tr>
 			</c:forEach>

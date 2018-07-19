@@ -1,5 +1,6 @@
 package com.jisheng.controller.customer;
 
+import com.jisheng.bo.LookCusOrder1;
 import com.jisheng.po.Order;
 import com.jisheng.service.OrderService;
 import com.jisheng.service.impl.ServiceFactory;
@@ -44,7 +45,7 @@ public class PayServlet extends HttpServlet {
 					request.setAttribute("msg1", "支付失败");
 			}
 			// 更新信息
-			List<Object[]> orders = orderServ.lookCusOrder1(ord);
+			List<LookCusOrder1> orders = orderServ.lookCusOrder1(ord);
 			request.getSession().setAttribute("orders", orders);
 			request.getSession().setAttribute("foodsPrice", amount);
 		} else

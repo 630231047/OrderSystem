@@ -35,7 +35,7 @@ public class UploadAssessServlet extends HttpServlet {
 		Storer storer = new Storer();
 		Customer customer = (Customer) request.getSession().getAttribute("customer");
 		assess.setCustomer_id(customer.getId());
-		upAssServl.setPath("E:/Program Files/javaee/FoodSystem/WebContent/uploadAccess");
+		upAssServl.setPath("E:/Program Files/ideaWorkplace/OrderSystem/OrderSystem-web/src/web/uploadAccess");
 		upAssServl.doGet(request, response);
 		List<String> fileList = upAssServl.getFileList();
 		if(fileList==null) {

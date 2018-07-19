@@ -9,10 +9,10 @@
 </head>
 <body>
 	<h1>欢迎您，管理员!</h1>
-				<a href="/FoodSystem/LogOffServlet"><button type="button">注销</button></a>
+				<a href="/LogOffServlet"><button type="button">注销</button></a>
 	<br />
 	<h3>申请商家的用户名单</h3>
-	<form action="/FoodSystem/JudgeServlet" method="post">
+	<form action="/JudgeServlet" method="post">
 		<table>
 			<c:forEach items="${applyStores}" var="i" varStatus="s">
 				<tr>

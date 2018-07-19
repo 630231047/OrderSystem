@@ -2,19 +2,19 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jisheng.dao.AdminDAO">
     <insert id="addCusRole" parameterType="com.jisheng.po.User" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO userandrole (id,user_id,role_id) values(null,?,?)
+        INSERT INTO userandrole (id,user_id,role_id) values(null,#{user_id},3)
     </insert>
     <delete id="removeCusRole" parameterType="com.jisheng.po.User">
-        DELETE FROM userandrole WHERE user_id AND role_id=?
+        DELETE FROM userandrole WHERE user_id AND role_id=3
     </delete>
     <insert id="addStoRole" parameterType="com.jisheng.po.User" >
         INSERT INTO userandrole (id,user_id,role_id) values(null,#{user_id},2)
     </insert>
     <delete id="removeStoRole" parameterType="com.jisheng.po.User">
-        DELETE FROM userandrole WHERE user_id AND role_id=#{role_id}
+        DELETE FROM userandrole WHERE user_id AND role_id=2
     </delete>
-    <select id="lookRole" parameterType="com.jisheng.po.User" resultType="com.jisheng.bo.AdminLookRole">
-        SELECT userandrole.user_id,roles.role_name
+    <select id="lookRole" parameterType="com.jisheng.po.User" resultType="string">
+        SELECT roles.role_name
 				FROM userandrole INNER JOIN roles
 				ON roles.role_id=userandrole.role_id WHERE user_id=#{user_id}
     </select>

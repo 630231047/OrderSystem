@@ -1,5 +1,6 @@
 package com.jisheng.controller.customer;
 
+import com.jisheng.bo.LookCusOrder1;
 import com.jisheng.po.Customer;
 import com.jisheng.po.Food;
 import com.jisheng.po.Order;
@@ -114,7 +115,7 @@ public class OrderServlet extends HttpServlet {
 			System.out.println("Error in OrderServlet.switch");
 		}
 		// 获得购物车中信息
-		List<Object[]> orders = orderServ.lookCusOrder1(order);
+		List<LookCusOrder1> orders = orderServ.lookCusOrder1(order);
 		request.getSession().setAttribute("orders", orders);
 		request.getRequestDispatcher("/storePage.jsp").forward(request, response);
 		// response.sendRedirect("/FoodSystem/storePage.jsp");

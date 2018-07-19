@@ -1,6 +1,7 @@
 package com.jisheng.controller.store;
 
 
+import com.jisheng.bo.LookCusPaidOrder;
 import com.jisheng.po.Order;
 import com.jisheng.service.OrderService;
 import com.jisheng.service.impl.ServiceFactory;
@@ -41,7 +42,7 @@ public class SendServlet extends HttpServlet {
 				orderServ.updateOrder(order);
 			}
 		}
-		List<Object[]> orderPaidList = orderServ.lookCusPaidOrder(order);
+		List<LookCusPaidOrder> orderPaidList = orderServ.lookCusPaidOrder(order);
 		request.getSession().setAttribute("orderPaidList", orderPaidList);
 		// 获得购物车中信息
 		request.getRequestDispatcher("/lookOrder.jsp").forward(request, response);

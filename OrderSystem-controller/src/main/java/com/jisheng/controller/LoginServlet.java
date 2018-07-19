@@ -66,9 +66,9 @@ public class LoginServlet extends HttpServlet {
 			if (userServ.checkLoginInfo(user)) {
 				// 密码正确 --- 登陆成功
 				user = userServ.getUserInfo(user);// 获得user完整信息
-				List<Object[]> roles = adminServ.lookRole(user);// 一个user可能有多个角色
-				for (Object[] rol : roles) {
-					if (rol[1].equals(role))
+				List<String> roles = adminServ.lookRole(user);// 一个user可能有多个角色
+				for (String rol : roles) {
+					if (rol.equals(role))
 						isTrue = true;
 				}
 				request.getSession().setAttribute("role", role);

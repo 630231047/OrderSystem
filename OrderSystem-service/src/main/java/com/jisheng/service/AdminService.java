@@ -34,7 +34,7 @@ public interface AdminService {
 	 * @param user
 	 * @return
 	 */
-	public List<Object[]> lookRole(User user);
+	public List<String> lookRole(User user);
 	/**
 	 * 查看所有角色
 	 */

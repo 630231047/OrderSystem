@@ -1,5 +1,6 @@
 package com.jisheng.controller.customer;
 
+import com.jisheng.bo.LookCusOrder1;
 import com.jisheng.po.Customer;
 import com.jisheng.po.Food;
 import com.jisheng.po.Order;
@@ -75,7 +76,7 @@ public class StoreServlet extends HttpServlet {
 		OrderService orderServ = ServiceFactory.OrderServ.INSTANCE.getOrderService();
 		order.setCustomer_id(customer.getId());
 		order.setStore_id(store.getStore_id());
-		List<Object[]> orders = orderServ.lookCusOrder1(order);
+		List<LookCusOrder1> orders = orderServ.lookCusOrder1(order);
 		request.getSession().setAttribute("orders", orders);
 		response.sendRedirect("/StorePageServlet");
 	}

@@ -3,10 +3,10 @@
 <mapper namespace="com.jisheng.dao.StorerDAO">
     <insert id="add" parameterType="com.jisheng.po.Storer" useGeneratedKeys="true" keyProperty="store_id">
         INSERT INTO stores (store_id,user_id,store_name,store_address,status)
-        values(null,#{user_id},#{store_name},#{store_address},#{status})
+        values(null,#{user_id},#{store_name},#{store_address},"审核中")
     </insert>
     <delete id="remove" parameterType="com.jisheng.po.Storer">
-        DELETE FROM stores WHERE store_id=?
+        DELETE FROM stores WHERE store_id=#{store_id}
     </delete>
     <select id="lookSomeOne" parameterType="com.jisheng.po.Storer" resultType="com.jisheng.po.Storer">
         SELECT store_id,user_id,store_name,store_address,avg_mark,status FROM stores

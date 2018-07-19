@@ -1,13 +1,11 @@
 package com.jisheng.service.impl;
 
-import com.jisheng.bo.AdminLookRole;
 import com.jisheng.dao.AdminDAO;
 import com.jisheng.service.AdminService;
 import com.jisheng.po.User;
 import com.jisheng.util.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdminServiceImpl implements AdminService {
@@ -58,20 +56,13 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public List<Object[]> lookRole(User user) {
-		openSqlSession();
-		List<AdminLookRole> adminLookRole = adminDAOImpl.lookRole(user);
-		closeSqlSession();
-		List<Object[]> objects = new ArrayList<>();
-		for (AdminLookRole adminLookRole1 : adminLookRole) {
-			for (int i = 0; i < 2; i++) {
-				Object[] obj = new Object[2];
-				obj[0]=adminLookRole1.getUser_id();
-				obj[1]=adminLookRole1.getRole_name();
-				objects.add(obj);
-			}
+	public List<String> lookRole(User user) {
+		try {
+			openSqlSession();
+			return adminDAOImpl.lookRole(user);
+		} finally {
+			closeSqlSession();
 		}
-		return objects;
 	}
 
 	@Override
@@ -85,6 +76,7 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public List<Object[]> lookAll1() {
 //		return adminDAOImpl.lookAll1();
+		//暂时用不上
 		return null;
 	}
 

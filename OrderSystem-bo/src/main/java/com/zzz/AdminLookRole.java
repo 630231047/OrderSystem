@@ -1,4 +1,4 @@
-package com.jisheng.bo;
+package com.zzz;
 
 public class AdminLookRole {
     /**
