@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
-public class AdminServiceImpl implements AdminService {
+public class AdminServiceImpl implements AdminService{
 	//	private AdminDAO<User> adminDAOImpl = new AdminDAOImpl<User>();
 	private AdminDAO<User> adminDAOImpl;
 	private SqlSession sqlSession;
