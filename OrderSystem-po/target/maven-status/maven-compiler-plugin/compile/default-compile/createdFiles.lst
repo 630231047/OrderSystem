@@ -1,0 +1,9 @@
+com\jisheng\po\Admin.class
+com\jisheng\po\Order.class
+com\jisheng\po\Food.class
+com\jisheng\po\Manger.class
+com\jisheng\po\User.class
+com\jisheng\po\Assess.class
+com\jisheng\po\Customer.class
+com\jisheng\po\Role.class
+com\jisheng\po\Storer.class

@@ -1,0 +1,9 @@
+com\jisheng\dao\AssessDAO.class
+com\jisheng\dao\CustomerDAO.class
+com\jisheng\dao\OrderDAO.class
+com\jisheng\dao\BaseDAO.class
+com\jisheng\dao\AdminDAO.class
+com\jisheng\dao\StorerDAO.class
+com\jisheng\dao\RoleDAO.class
+com\jisheng\dao\UserDAO.class
+com\jisheng\dao\FoodDAO.class
