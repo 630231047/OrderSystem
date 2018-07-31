@@ -21,7 +21,7 @@ import java.util.List;
 @WebServlet("/GetApplyServlet")
 public class GetApplyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		StorerService stoServ = ServiceFactory.StorerServ.INSTANCE.getStoreServ();
@@ -32,7 +32,7 @@ public class GetApplyServlet extends HttpServlet {
 		return;
 
 	}
-
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub

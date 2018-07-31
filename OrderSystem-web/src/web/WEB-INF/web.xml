@@ -4,35 +4,73 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <display-name>OrderSystem</display-name>
-    <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
-    </welcome-file-list>
+    <!--<welcome-file-list>-->
+        <!--<welcome-file>login.jsp</welcome-file>-->
+    <!--</welcome-file-list>-->
+    <servlet>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!-- 配置springMVC需要加载的配置文件
+            spring-dao.xml,spring-service.xml,spring-web.xml
+            Mybatis - > spring -> springmvc
+         -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring/spring-*.xml</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <!-- 默认匹配所有的请求 -->
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
     <filter>
-        <filter-name>NoCacheFilter</filter-name>
-        <filter-class>com.jisheng.filter.NoCacheFilter</filter-class>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
     </filter>
     <filter-mapping>
-        <filter-name>NoCacheFilter</filter-name>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <!-- 字符编码过滤器 -->
     <filter>
-        <filter-name>PrivilegeFilter</filter-name>
-        <filter-class>com.jisheng.filter.PrivilegeFilter</filter-class>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
     </filter>
     <filter-mapping>
-        <filter-name>PrivilegeFilter</filter-name>
+        <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
-    <filter>
-        <filter-name>PermissionFilter</filter-name>
-        <filter-class>com.jisheng.filter.PermissionFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>PermissionFilter</filter-name>
-        <url-pattern>*.jsp</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>FORWARD</dispatcher>
-    </filter-mapping>
+    <!--<filter>-->
+        <!--<filter-name>NoCacheFilter</filter-name>-->
+        <!--<filter-class>com.jisheng.filter.NoCacheFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>NoCacheFilter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+    <!--<filter>-->
+        <!--<filter-name>PrivilegeFilter</filter-name>-->
+        <!--<filter-class>com.jisheng.filter.PrivilegeFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>PrivilegeFilter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+        <!--<dispatcher>REQUEST</dispatcher>-->
+        <!--<dispatcher>FORWARD</dispatcher>-->
+    <!--</filter-mapping>-->
+    <!--<filter>-->
+        <!--<filter-name>PermissionFilter</filter-name>-->
+        <!--<filter-class>com.jisheng.filter.PermissionFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>PermissionFilter</filter-name>-->
+        <!--<url-pattern>*.jsp</url-pattern>-->
+        <!--<dispatcher>REQUEST</dispatcher>-->
+        <!--<dispatcher>FORWARD</dispatcher>-->
+    <!--</filter-mapping>-->
 </web-app>

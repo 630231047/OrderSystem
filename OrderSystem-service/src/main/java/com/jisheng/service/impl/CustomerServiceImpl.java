@@ -6,70 +6,42 @@ import com.jisheng.po.Customer;
 import com.jisheng.service.CustomerService;
 import com.jisheng.util.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CustomerServiceImpl implements CustomerService {
-	private CustomerDAO customerDAOImpl;
-	private SqlSession sqlSession;
-	private void openSqlSession(){
-		sqlSession = SessionUtil.openSqlSession();
-		customerDAOImpl = sqlSession.getMapper(CustomerDAO.class);
-	}
-	private void closeSqlSession(){
-		sqlSession.close();
-	}
-	public CustomerServiceImpl() {
-	}
+    @Autowired
+    private CustomerDAO customerDAOImpl;
 
-	@Override
-	public boolean addCustomer(Customer customer) {
-		try {
-			openSqlSession();
-			return customerDAOImpl.add(customer);
-		} finally {
-			closeSqlSession();
-		}
-	}
+    public CustomerServiceImpl() {
+    }
 
-	@Override
-	public boolean removeCustomer(Customer customer) {
-		try {
-			openSqlSession();
-			return customerDAOImpl.remove(customer);
-		} finally {
-			closeSqlSession();
-		}
-	}
+    @Override
+    public boolean addCustomer(Customer customer) {
+        return customerDAOImpl.add(customer);
+    }
 
-	@Override
-	public boolean updateCustomer(Customer customer) {
-		try {
-			openSqlSession();
-			return customerDAOImpl.update(customer);
-		} finally {
-			closeSqlSession();
-		}
-	}
+    @Override
+    public boolean removeCustomer(Customer customer) {
+        return customerDAOImpl.remove(customer);
+    }
 
-	@Override
-	public List<Customer> lookSomeOne(Customer customer) {
-		try {
-			openSqlSession();
-			return customerDAOImpl.lookSomeOne(customer);
-		} finally {
-			closeSqlSession();
-		}
-	}
+    @Override
+    public boolean updateCustomer(Customer customer) {
+        return customerDAOImpl.update(customer);
+    }
 
-	@Override
-	public List<Customer> lookAll() {
-		try {
-			openSqlSession();
-			return customerDAOImpl.lookAll();
-		} finally {
-			closeSqlSession();
-		}
-	}
+    @Override
+    public List<Customer> lookSomeOne(Customer customer) {
+        return customerDAOImpl.lookSomeOne(customer);
+    }
+
+    @Override
+    public List<Customer> lookAll() {
+        return customerDAOImpl.lookAll();
+    }
 
 }

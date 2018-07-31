@@ -16,7 +16,8 @@ import java.util.List;
 /**
  * 根据选择得到不同的店铺数据,并进行分页
  */
-@WebServlet("/CustomerPageServlet")
+@WebServlet("/CustomerPageServlet111")
+
 public class CustomerPageServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

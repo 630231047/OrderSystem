@@ -6,122 +6,66 @@ import com.jisheng.po.Storer;
 import com.jisheng.service.StorerService;
 import com.jisheng.util.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StorerServiceImpl implements StorerService {
+    @Autowired
     private StorerDAO storerDAOImpl;
-    private SqlSession sqlSession;
-
-    private void openSqlSession() {
-        sqlSession = SessionUtil.openSqlSession();
-        storerDAOImpl = sqlSession.getMapper(StorerDAO.class);
-    }
-
-    private void closeSqlSession() {
-        sqlSession.close();
-    }
 
     public StorerServiceImpl() {
     }
 
     @Override
     public boolean addStorer(Storer storer) {
-        try {
-            openSqlSession();
-            return storerDAOImpl.add(storer);
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.add(storer);
     }
 
     @Override
     public boolean removeStorer(Storer storer) {
-        try {
-            openSqlSession();
-            return storerDAOImpl.remove(storer);
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.remove(storer);
     }
 
     @Override
     public List<Storer> lookSomeOne(Storer storer) {
-        try {
-            openSqlSession();
-            return storerDAOImpl.lookSomeOne(storer);
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.lookSomeOne(storer);
     }
 
     @Override
     public List<Storer> lookAll() {
-        try {
-            openSqlSession();
-            return storerDAOImpl.lookAll();
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.lookAll();
     }
 
     @Override
     public Storer lookSomeOne1(Storer storer) {
-        try {
-            openSqlSession();
-            return storerDAOImpl.lookSomeOne1(storer);
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.lookSomeOne1(storer);
     }
 
     @Override
     public boolean updateStorer(Storer storer) {
-        try {
-            openSqlSession();
-            return storerDAOImpl.update(storer);
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.update(storer);
     }
 
     @Override
     public boolean updateMark(Storer storer) {
-        try {
-            openSqlSession();
-            return storerDAOImpl.updateMark(storer);
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.updateMark(storer);
     }
 
     @Override
     public List<Storer> lookAllApply() {
-        try {
-            openSqlSession();
-            return storerDAOImpl.lookAllApply();
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.lookAllApply();
     }
 
     @Override
     public boolean updateStatus(Storer storer) {
-        try {
-            openSqlSession();
-            return storerDAOImpl.updateStatus(storer);
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.updateStatus(storer);
     }
 
     @Override
     public List<Storer> lookSomeOne2(Storer storer) {
-        try {
-            openSqlSession();
-            return storerDAOImpl.lookSomeOne2(storer);
-        } finally {
-            closeSqlSession();
-        }
+        return storerDAOImpl.lookSomeOne2(storer);
     }
 }

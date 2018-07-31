@@ -6,82 +6,58 @@ import com.jisheng.po.Assess;
 import com.jisheng.service.AssessService;
 import com.jisheng.util.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+@Service
 public class AssessServiceImpl implements AssessService {
-	private AssessDAO assessDAOImpl;
-	private SqlSession sqlSession;
-	private void openSqlSession(){
-		sqlSession = SessionUtil.openSqlSession();
-		assessDAOImpl = sqlSession.getMapper(AssessDAO.class);
-	}
-	private void closeSqlSession(){
-		sqlSession.close();
-	}
-	public AssessServiceImpl() {
-	}
-	@Override
-	public boolean add(Assess assess) {
-		openSqlSession();
-		assess.setDate(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-		boolean succeed= assessDAOImpl.add(assess);
-		closeSqlSession();
-		return succeed;
-	}
+    @Autowired
+    private AssessDAO assessDAO;
 
-	@Override
-	public boolean remove(Assess assess) {
-		openSqlSession();
-		Assess assess1= assessDAOImpl.lookPath(assess);
-		String uuidname = assess1.getUuidname();
-		String savepath = assess1.getSavepath();
-		new File("E:/Program Files/ideaWorkplace/OrderSystem/OrderSystem-web/src/web/uploadAccess" + savepath + "/" + uuidname).delete();
-		closeSqlSession();
-		return assessDAOImpl.remove(assess);
-	}
+    public AssessServiceImpl() {
+    }
 
-	@Override
-	public List<Assess> lookSomeOne(Assess assess) {
-		try {
-			openSqlSession();
-			return assessDAOImpl.lookSomeOne(assess);
-		} finally {
-			closeSqlSession();
-		}
-	}
+    @Override
+    public boolean add(Assess assess) {
+        assess.setDate(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        boolean succeed = assessDAO.add(assess);
+        return succeed;
+    }
 
-	@Override
-	public float getStoreMark(Assess assess) {
-		try {
-			openSqlSession();
-			return assessDAOImpl.getStoreMark(assess);
-		} finally {
-			closeSqlSession();
-		}
-	}
+    @Override
+    public boolean remove(Assess assess) {
+        ;
+        Assess assess1 = assessDAO.lookPath(assess);
+        String uuidname = assess1.getUuidname();
+        String savepath = assess1.getSavepath();
+        new File("E:/Program Files/ideaWorkplace/OrderSystem/OrderSystem-web/src/web/uploadAccess" + savepath + "/" + uuidname).delete();
 
-	@Override
-	public List<Assess> lookAll() {
-		try {
-			openSqlSession();
-			return assessDAOImpl.lookAll();
-		} finally {
-			closeSqlSession();
-		}
-	}
+        return assessDAO.remove(assess);
+    }
 
-	@Override
-	public Assess lookPath(Assess assess) {
-		try {
-			openSqlSession();
-			return assessDAOImpl.lookPath(assess);
-		} finally {
-			closeSqlSession();
-		}
-	}
+    @Override
+    public List<Assess> lookSomeOne(Assess assess) {
+            return assessDAO.lookSomeOne(assess);
+    }
+
+    @Override
+    public float getStoreMark(Assess assess) {
+            return assessDAO.getStoreMark(assess);
+    }
+
+    @Override
+    public List<Assess> lookAll() {
+            return assessDAO.lookAll();
+    }
+
+    @Override
+    public Assess lookPath(Assess assess) {
+            return assessDAO.lookPath(assess);
+    }
 
 }

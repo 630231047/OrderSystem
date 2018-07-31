@@ -15,7 +15,7 @@ import java.util.List;
  * @author 63023
  *
  */
-@WebServlet("/StorePageServlet")
+@WebServlet("/StorePageServlet111")
 public class StorePageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

@@ -1,6 +1,7 @@
 package com.jisheng.service.impl;
 
 import com.jisheng.service.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 用简单工厂加枚举单例来实现只有一个service对象
@@ -11,11 +12,8 @@ import com.jisheng.service.*;
 public class ServiceFactory {
 	public enum AdminServ {
 		INSTANCE;
+		@Autowired
 		private AdminService adminServ;
-
-		AdminServ() {
-			adminServ = new AdminServiceImpl();
-		}
 
 		public AdminService getAdminServ() {
 			return adminServ;
@@ -24,11 +22,8 @@ public class ServiceFactory {
 
 	public enum AssessServ {
 		INSTANCE;
+		@Autowired
 		private AssessService assessServ;
-
-		AssessServ() {
-			assessServ = new AssessServiceImpl();
-		}
 
 		public AssessService getAssessServ() {
 			return assessServ;
@@ -37,11 +32,8 @@ public class ServiceFactory {
 
 	public enum CusServ {
 		INSTANCE;
+		@Autowired
 		private CustomerService cusServ;
-
-		CusServ() {
-			cusServ = new CustomerServiceImpl();
-		}
 
 		public CustomerService getCusService() {
 			return cusServ;
@@ -51,11 +43,8 @@ public class ServiceFactory {
 
 	public enum FoodServ {
 		INSTANCE;
+		@Autowired
 		private FoodService foodServ;
-
-		FoodServ() {
-			foodServ = new FoodServiceImpl();
-		}
 
 		public FoodService getFoodService() {
 			return foodServ;
@@ -64,11 +53,8 @@ public class ServiceFactory {
 
 	public enum OrderServ {
 		INSTANCE;
+		@Autowired
 		private OrderService orderServ;
-
-		OrderServ() {
-			orderServ = new OrderServiceImpl();
-		}
 
 		public OrderService getOrderService() {
 			return orderServ;
@@ -77,11 +63,8 @@ public class ServiceFactory {
 
 	public enum StorerServ {
 		INSTANCE;
+		@Autowired
 		private StorerService storerServ;
-
-		StorerServ() {
-			storerServ = new StorerServiceImpl();
-		}
 
 		public StorerService getStoreServ() {
 			return storerServ;
@@ -90,6 +73,7 @@ public class ServiceFactory {
 
 	public enum UserServ {
 		INSTANCE;
+		@Autowired
 		private UserService userServ;
 
 		UserServ() {
